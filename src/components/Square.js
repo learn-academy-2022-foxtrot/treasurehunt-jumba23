@@ -1,8 +1,9 @@
 import React from "react";
 
-const Square = ({ square, index, handleGamePlay }) => {
+const Square = ({ square, index, handleGamePlay, gameOver }) => {
   const handleClick = () => {
-    handleGamePlay(index);
+    console.log(gameOver);
+    return !gameOver ? handleGamePlay(index) : null;
   };
   return (
     <>
