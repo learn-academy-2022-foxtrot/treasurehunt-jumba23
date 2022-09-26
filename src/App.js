@@ -59,7 +59,7 @@ const App = () => {
           );
         })}
       </div>
-      <button onClick={handleReset}>Reset Game</button>
+      <button onClick={handleReset}>Play Again</button>
     </>
   );
 };
