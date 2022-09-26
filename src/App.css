@@ -1,6 +1,11 @@
 h1 {
   text-align: center;
 }
+.attCounter {
+  margin: 1rem auto;
+  text-align: center;
+  font-size: large;
+}
 
 .square {
   height: 200px;

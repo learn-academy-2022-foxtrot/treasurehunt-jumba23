@@ -21,6 +21,8 @@ const App = () => {
     Math.floor(Math.random() * board.length)
   );
 
+  const [counter, setCounter] = useState(5);
+
   const handleGamePlay = (clickedSquare) => {
     console.log("treasureLocation:", treasureLocation);
     console.log("bombLocation:", bombLocation);
@@ -34,19 +36,25 @@ const App = () => {
     } else {
       updateBoard[clickedSquare] = "🌴";
       setBoard(updateBoard);
+      runCounter(counter);
     }
+  };
+
+  const runCounter = () => {
+    counter === 1 ? handleReset() : setCounter(counter - 1);
   };
 
   const handleReset = () => {
     setBoard(["?", "?", "?", "?", "?", "?", "?", "?", "?"]);
     setTreasureLocation(Math.floor(Math.random() * board.length));
     setBombLocation(Math.floor(Math.random() * board.length));
+    setCounter(5);
   };
 
-  console.log("treasureLocation:", treasureLocation);
   return (
     <>
       <h1>Treasure Hunt Game</h1>
+      <div className="attCounter">Number of Attempts left : {counter}</div>
       <div className="board-game">
         {board.map((square, index) => {
           return (
