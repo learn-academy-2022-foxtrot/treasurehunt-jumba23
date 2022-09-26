@@ -22,6 +22,7 @@ const App = () => {
   );
 
   const [counter, setCounter] = useState(5);
+  const [youWin, setYouWin] = useState("");
 
   const handleGamePlay = (clickedSquare) => {
     console.log("treasureLocation:", treasureLocation);
@@ -29,6 +30,7 @@ const App = () => {
     let updateBoard = [...board];
     if (clickedSquare === treasureLocation) {
       updateBoard[clickedSquare] = "💎";
+      setYouWin("Great job you WIN 🏆");
       setBoard(updateBoard);
     } else if (clickedSquare === bombLocation) {
       updateBoard[clickedSquare] = "💣";
@@ -54,7 +56,11 @@ const App = () => {
   return (
     <>
       <h1>Treasure Hunt Game</h1>
-      <div className="attCounter">Number of Attempts left : {counter}</div>
+      {!youWin ? (
+        <div className="attCounter">Number of Attempts left : {counter}</div>
+      ) : (
+        <div className="attCounter">{youWin}</div>
+      )}
       <div className="board-game">
         {board.map((square, index) => {
           return (
@@ -67,7 +73,9 @@ const App = () => {
           );
         })}
       </div>
-      <button onClick={handleReset}>Play Again</button>
+      <div class="button-container-div" onClick={handleReset}>
+        <button>Play Again</button>
+      </div>
     </>
   );
 };

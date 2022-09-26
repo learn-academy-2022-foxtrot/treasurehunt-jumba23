@@ -21,3 +21,10 @@ h1 {
   width: 610px;
   margin: 0 auto;
 }
+.button-container-div {
+  text-align: center;
+  padding: 2rem;
+  /* border: 1px solid coral; */
+  /* height: 40vh;
+  width: 50vw; */
+}
