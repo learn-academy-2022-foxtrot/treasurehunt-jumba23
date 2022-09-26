@@ -31,9 +31,16 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
   - added random location for bomb and treasure into state
   - added a conditional in the handleGamePlay method to produce different outcomes
 - As a user, I can click on a “Play Again” button that will restart the game.
+  - branch: game-reset
   - added a button element on main page
   - added functionality that resets all of the initial states to their initial values
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at five and decrements one every time I click on a square that is not the treasure nor the bomb.
+  - branch: counter
+  - added ned div element right after h1 on main page (App.js)
+  - created new state - counter and set the initial value at 5
+  - created a new function that handles counter's logic and calls on reset when no attempts left or just subtract every non bomb or treasure click
+  - added runCounter function call to handleGamePlay at the very last catch all part.
+  - added counter setState method to the reset button's function
 - As a user, I can see a message informing me that I won the game if I select the square that contains the treasure.
 - As a user, I can see a message informing me that I lost the game if I select the square that contains the bomb.
 - As a user, I cannot continue to play the game after I win or lose.
