@@ -48,6 +48,9 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
   - added added setState method to hadnlePlayGame function in the part where a player clicks on a treasure.
   - added conditional rendering in to runs when the newly created state is changed and display the winning message over the counter message
 - As a user, I can see a message informing me that I lost the game if I select the square that contains the bomb.
+  - branch: you-lost
+  - changed name of our most recent state addition to youWinLose so we can assign both values
+  - added setYouWinLose to handlePlayGame function in the part where a player clicks on bomb
 - As a user, I cannot continue to play the game after I win or lose.
 - As a user, I can see a message informing me that I lost the game when I run out of turns (the counter reaches zero).
 
