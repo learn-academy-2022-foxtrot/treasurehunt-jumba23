@@ -52,6 +52,12 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
   - changed name of our most recent state addition to youWinLose so we can assign both values
   - added setYouWinLose to handlePlayGame function in the part where a player clicks on bomb
 - As a user, I cannot continue to play the game after I win or lose.
+  - branch: game-over
+  - added another boolean state for game over message
+  - initial value is set to false
+  - the state is updated at two places in handlePlayGame function and changed to true
+  - this state value will be sent to our square component
+  - the new value will be sent to handleClick and create a ternary operator to check the value
 - As a user, I can see a message informing me that I lost the game when I run out of turns (the counter reaches zero).
 
 ### 🏔 Stretch Goals

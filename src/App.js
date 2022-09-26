@@ -24,6 +24,8 @@ const App = () => {
   const [counter, setCounter] = useState(5);
   const [youWinLose, setYouWinLose] = useState("");
 
+  const [gameOver, setGameOver] = useState(false);
+
   const handleGamePlay = (clickedSquare) => {
     console.log("treasureLocation:", treasureLocation);
     console.log("bombLocation:", bombLocation);
@@ -31,10 +33,12 @@ const App = () => {
     if (clickedSquare === treasureLocation) {
       updateBoard[clickedSquare] = "💎";
       setYouWinLose("Great job you WIN 🏆");
+      setGameOver(true);
       setBoard(updateBoard);
     } else if (clickedSquare === bombLocation) {
       updateBoard[clickedSquare] = "💣";
       setYouWinLose("Ouch, you LOSE ☹️");
+      setGameOver(true);
       setBoard(updateBoard);
     } else {
       updateBoard[clickedSquare] = "🌴";
@@ -70,6 +74,7 @@ const App = () => {
               index={index}
               key={index}
               handleGamePlay={handleGamePlay}
+              gameOver={gameOver}
             />
           );
         })}
