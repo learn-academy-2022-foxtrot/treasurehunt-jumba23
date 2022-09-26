@@ -48,7 +48,10 @@ const App = () => {
   };
 
   const runCounter = () => {
-    counter === 1 ? handleReset() : setCounter(counter - 1);
+    if (counter === 1) {
+      return setYouWinLose("Ouch, you LOSE ☹️"), setGameOver(true);
+    }
+    return setCounter(counter - 1);
   };
 
   const handleReset = () => {

@@ -59,6 +59,9 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
   - this state value will be sent to our square component
   - the new value will be sent to handleClick and create a ternary operator to check the value
 - As a user, I can see a message informing me that I lost the game when I run out of turns (the counter reaches zero).
+  - branch: no-more-clicks
+  - updated runCounter app
+  - added one more function call in our conditional statement to set true value to our gameOver variable.
 
 ### 🏔 Stretch Goals
 
